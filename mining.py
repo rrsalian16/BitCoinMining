@@ -20,11 +20,13 @@ if __name__=='__main__':
     Rakshith -> Rahul -> 20,
     Pratheek -> Praveen -> 45
     '''
+    previou_block_hash='0000000000000000000022131d35dde7409ad4c022521a2e32c3819daf0b4347'
     difficulty=5
+    block_number=5
     import time
     start = time.time()
     print("start mining")
-    new_hash = mine(5,transactions,'0000000000000000000022131d35dde7409ad4c022521a2e32c3819daf0b4347', difficulty)
+    new_hash = mine(block_number,transactions,previou_block_hash, difficulty)
     total_time = str((time.time() - start))
     print(f"end mining. Mining took: {total_time} seconds")
     print(new_hash)
